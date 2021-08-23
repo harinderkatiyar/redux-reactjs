@@ -1,1 +1,4 @@
 # redux-reactjs
+
+Notes
+

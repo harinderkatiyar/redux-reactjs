@@ -28,6 +28,13 @@
   color: #61dafb;
 }
 
+.inputValue {
+  text-align: center;
+  font: 2em sans-serif;
+}
+.trigger{
+  cursor: pointer;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

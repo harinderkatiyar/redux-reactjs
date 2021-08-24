@@ -1,10 +1,50 @@
-# Getting Started with Create React App
+#redux-reactjs
+ 
+Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ACTION (WHAT TO DO?)
 
-## Available Scripts
+REDUCER (HOW TO DO?)
 
-In the project directory, you can run:
+STORE (OBJECT WHICH HOLDS THE STATE OF THE APPLICATION)
+
+FUNCTIONS ASSOCIATED WITH STORE CreateStore() dispatch(action) getState()
+
+Action(Pure Object)
+Actions are plain javaScript objects that have a type fieldActions only tell what to do,but they don't tell how to do.
+
+example: return{ type:'INCREMENT', PAYLOAD: num }
+
+1.1) ACTION CREATOR(PURE FUNCTION WHICH CREATES AN ACTION) EXAMPLE : EXPORT CONST incNumber=(num)=>{ return { type:'INCREMENT', PAYLOAD:NUM } }
+
+REDUCER Reducers are functions that take the current state and action as arguments, and return a new state result
+
+example: const initialState = 0; //initialState or current state, //action as aargument
+const changeTheNumber = (state = initialState,action)=>{ switch(action.type){ case 'INCREMENT': return state+action.payload; case 'DECREMENT': return state-1; default : return state; } }
+
+Store The Redux store brings together the state, actions and reducers that make up your app.
+
+it's important to note that you'll only have a single store in a redux application.
+
+Every Redux store has a single root reducer function.
+
+example: import {createStore} from "redux"; const store = createStore(rootReducers);
+
+REDUX Principle
+
+Single source of truth The global state of your application is stored as an object inside a single store.
+
+State is Read-Only The only way to change the state is to dispatch an action. Note - Disptch ->it's trigger the action
+
+Immutability,One-way data flow,Predictability of outcome.
+
+Note - 1)Immutability - data is not changing 2)mutability - data is chanaging
+
+Changes are made with pure Reducer function
+Note - Pure function means it's always return the same output
+
+
+
 
 ### `yarn start`
 
@@ -28,43 +68,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

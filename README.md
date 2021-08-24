@@ -1,4 +1,8 @@
 #redux-reactjs
+
+![image](https://user-images.githubusercontent.com/64924301/130692661-9f118d58-946b-4744-b80a-93b6a15b3e63.png)
+
+ 
  
 Notes
 
@@ -68,7 +72,5 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-![image](https://user-images.githubusercontent.com/64924301/130692661-9f118d58-946b-4744-b80a-93b6a15b3e63.png)
 
 
